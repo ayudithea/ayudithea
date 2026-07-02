@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TESPOIN Social</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#eef2f5}
+header{position:sticky;top:0;background:#1877f2;color:#fff;padding:14px 16px;
+display:flex;justify-content:space-between;align-items:center}
+header input{width:45%;padding:8px;border:none;border-radius:20px}
+.container{max-width:700px;margin:auto;padding:10px}
+.card{background:#fff;border-radius:12px;padding:15px;margin-bottom:12px;
+box-shadow:0 2px 6px rgba(0,0,0,.12)}
+textarea{width:100%;height:80px;border:1px solid #ddd;border-radius:8px;padding:10px}
+button{background:#1877f2;color:#fff;border:none;padding:10px 16px;
+border-radius:8px;margin-top:8px;cursor:pointer}
+.post img{width:100%;border-radius:10px;margin-top:10px}
+.actions{display:flex;justify-content:space-around;margin-top:10px;
+padding-top:10px;border-top:1px solid #eee;color:#666}
+nav{position:fixed;bottom:0;left:0;right:0;background:#fff;
+display:flex;justify-content:space-around;padding:12px;
+box-shadow:0 -2px 8px rgba(0,0,0,.15)}
+</style>
+</head>
+<body>
+
+<header>
+<strong>TESPOIN Social</strong>
+<input placeholder="Cari...">
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Buat Postingan</h3>
+<textarea id="postText" placeholder="Apa yang Anda pikirkan hari ini?"></textarea>
+<button onclick="buatPosting()">Posting</button>
+</div>
+
+<div id="feed">
+
+<div class="card post">
+<b>Admin TESPOIN</b><br><br>
+Selamat datang di TESPOIN Social.
+<div class="actions">
+<span>👍 Like</span>
+<span>💬 Komentar</span>
+<span>↗ Bagikan</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<nav>
+<div>🏠<br>Beranda</div>
+<div>🛒<br>Market</div>
+<div>➕<br>Posting</div>
+<div>💬<br>Chat</div>
+<div>👤<br>Profil</div>
+</nav>
+
+<script>
+function buatPosting(){
+ let t=document.getElementById("postText");
+ if(t.value.trim()==""){
+   alert("Tulis postingan terlebih dahulu");
+   return;
+ }
+ let d=document.createElement("div");
+ d.className="card post";
+ d.innerHTML="<b>Anda</b><br><br>"+t.value+
+ "<div class='actions'><span>👍 Like</span><span>💬 Komentar</span><span>↗ Bagikan</span></div>";
+ document.getElementById("feed").prepend(d);
+ t.value="";
+}
+</script>
+
+</body>
+</html>
