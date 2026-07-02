@@ -31,14 +31,16 @@ overflow-x:auto;
 
 /* ===== HEADER ===== */
 .header{
-background:white;
-display:flex;
-align-items:center;
-justify-content:center;
-height:460px;
-position:relative;
-overflow:hidden;
-min-width:1200px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:460px;
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    max-width:1400px;
+    margin:auto;
 }
 
 .header::after{
@@ -351,33 +353,30 @@ height:auto;
 /* LOGO BULAT TENGAH */
 
 .logo-tengah{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-bottom:-160px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-160px;
+    width:360px;
+    height:360px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    z-index:5;
+    border:16px solid transparent;
+    background-image:
+    linear-gradient(white,white),
+    linear-gradient(135deg,#16a34a,#f97316);
+    background-origin:border-box;
+    background-clip:content-box,border-box;
+}
 
-width:360px;
-height:360px;
-border-radius:50%;
-
-background:white;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-overflow:hidden;
-
-z-index:5;
-
-border:16px solid transparent;
-
-background-image:
-linear-gradient(white,white),
-linear-gradient(135deg,#16a34a,#f97316);
-
-background-origin:border-box;
-background-clip:content-box,border-box;
+.logo-tengah img{
+    width:65%;
+    margin-top:-150px;
 }
 
 .logo-tengah img{
@@ -492,14 +491,20 @@ animation:keranjangBlink 0.5s ease 3;
 /* SLIDER GOOGLE SHEET */
 
 .slider-sheet{
-position:absolute;
-top:40px;
-left:0;
-width:100%;
-overflow:hidden;
-z-index:1;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:100%;
+    overflow:hidden;
+    z-index:1;
 }
 
+.slide-manual img{
+    width:220px;
+    height:380px;
+    object-fit:cover;
+    border-radius:10px;
+}
 .slides{
 display:flex;
 gap:20px;
@@ -524,6 +529,23 @@ transform:translateX(0);
 100%{
 transform:translateX(-50%);
 }
+@media (max-width:768px){
+
+.header{
+    height:460px;
+}
+
+.logo-tengah{
+    width:360px;
+    height:360px;
+    bottom:-160px;
+}
+
+.slide-manual img{
+    width:220px;
+    height:380px;
+}
+
 }
 </style>
 </head>
