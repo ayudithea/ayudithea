@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A YUDI THEA | Servis HP</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f5f5f5;color:#333}
+header{background:linear-gradient(135deg,#ff6a00,#ff9800);color:#fff;text-align:center;padding:40px 20px}
+header h1{font-size:38px}
+header p{margin-top:10px}
+marquee{background:#d50000;color:#fff;padding:10px;font-weight:bold}
+.slider{position:relative;max-width:1100px;margin:20px auto;overflow:hidden;border-radius:16px}
+.slide{display:none;width:100%}
+.slide.active{display:block}
+.slide img{width:100%;display:block}
+.section{max-width:1100px;margin:auto;padding:25px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+.card h3{color:#ff6a00;margin-bottom:10px}
+.btn{display:inline-block;background:#25D366;color:#fff;padding:14px 22px;border-radius:30px;text-decoration:none;font-weight:bold}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.gallery img{width:100%;border-radius:12px}
+footer{background:#222;color:#fff;text-align:center;padding:30px;margin-top:30px}
+.float{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 4px 10px rgba(0,0,0,.3)}
+</style>
+</head>
+<body>
+
+<marquee>
+📢 Yuk datang ke Konter A YUDI THEA • Promo Ganti LCD • Promo Ganti Baterai • Servis HP Cepat • Harga Bersahabat • Garansi Servis • Hubungi 0823-1926-4646
+</marquee>
+
+<header>
+<h1>A YUDI THEA</h1>
+<p>Pusat Servis HP • Ganti LCD • Ganti Baterai • Sparepart Berkualitas</p><br>
+<a class="btn" href="https://wa.me/6282319264646">Chat WhatsApp</a>
+</header>
+
+<div class="slider">
+<div class="slide active"><img src="promo1.png" alt="Promo 1"></div>
+<div class="slide"><img src="promo2.png" alt="Promo 2"></div>
+<div class="slide"><img src="promo3.png" alt="Promo 3"></div>
+<div class="slide"><img src="promo4.jpg" alt="Promo 4"></div>
+<div class="slide"><img src="promo5.png" alt="Promo 5"></div>
+</div>
+
+<section class="section">
+<h2 style="text-align:center;margin-bottom:20px">Layanan Kami</h2>
+<div class="cards">
+<div class="card"><h3>📱 Ganti LCD</h3><p>LCD original & berkualitas dengan garansi.</p></div>
+<div class="card"><h3>🔋 Ganti Baterai</h3><p>Baterai baru, awet dan aman.</p></div>
+<div class="card"><h3>⚙️ Servis Hardware</h3><p>Mati total, konektor cas, speaker, kamera, dll.</p></div>
+<div class="card"><h3>💻 Software</h3><p>Flash, unlock, hapus akun, update sistem.</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2 style="text-align:center;margin-bottom:20px">Galeri Promo & Hasil Servis</h2>
+<div class="gallery">
+<img src="galeri5.jpg">
+<img src="galeri2.jpg">
+<img src="galeri3.jpg">
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+<h3>Kenapa Memilih A YUDI THEA?</h3>
+<ul>
+<li>✔ Teknisi berpengalaman</li>
+<li>✔ Pengerjaan cepat</li>
+<li>✔ Harga bersahabat</li>
+<li>✔ Sparepart berkualitas</li>
+<li>✔ Garansi servis</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<h3>A YUDI THEA</h3>
+<p>Servis HP • Ganti LCD • Ganti Baterai</p>
+<p>WhatsApp: 0823-1926-4646</p>
+<p>Terima kasih atas kepercayaan Anda.</p>
+</footer>
+
+<a class="float" href="https://wa.me/6282319264646">WA</a>
+
+<script>
+let s=document.querySelectorAll(".slide"),i=0;
+setInterval(()=>{
+ s[i].classList.remove("active");
+ i=(i+1)%s.length;
+ s[i].classList.add("active");
+},3000);
+</script>
+
+</body>
+</html>
